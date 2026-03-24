@@ -1,11 +1,20 @@
 import streamlit as st
 import pandas as pd
+
 from openpyxl import load_workbook
 from openpyxl.styles import Alignment, Font, PatternFill, Border, Side
 from openpyxl.utils import get_column_letter
+
 from datetime import datetime, date, timedelta
-import io, time, warnings
-warnings.filterwarnings("ignore", category=UserWarning, module="openpyxl")
+import io
+import time
+import warnings
+
+warnings.filterwarnings(
+    "ignore",
+    category=UserWarning,
+    module="openpyxl"
+)
 
 st.set_page_config(page_title="SBR Tracker Pipeline", page_icon="⚡", layout="wide", initial_sidebar_state="expanded")
 
